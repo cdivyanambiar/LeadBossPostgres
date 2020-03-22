@@ -10,9 +10,9 @@ Lead management is essential for increase any kind of sales. Most of the compani
 
 
 ## Support
-GET : http://localhost:8080/leads
+GET: http://localhost:8080/leads
 
-GET  : http://localhost:8080/leads/{id}
+GET: http://localhost:8080/leads/{id}
 
 POST: http://localhost:8080/leads
 
