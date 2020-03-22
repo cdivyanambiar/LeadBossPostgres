@@ -41,11 +41,6 @@ Payload for POST :
 		"leadPriority": "LeadPriority1",
 		"leadStatus": "LeadStatus1",
 		"leadOwner": "LeadOwner1"
-	},
-	"followup": {
-		"followupMedium": "Medium1",
-		"date": "2020-02-21",
-		"time": "10.00 AM"
 	}
 }
 
