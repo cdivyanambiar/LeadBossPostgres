@@ -5,14 +5,10 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.leadproject.model.Lead;
+import com.leadproject.model.Email;
 
-
-/**
- * 
- */
 @Repository
-public interface LeadRepository extends JpaRepository<Lead, Long> 
+public interface EmailRepository extends JpaRepository<Email, Long> 
 {
-    public Optional<Lead> findById(String id);
+    public Optional<Email> findById(String id);
 }

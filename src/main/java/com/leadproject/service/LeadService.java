@@ -24,14 +24,7 @@ public class LeadService
     {
         return leadRepository.findAll();
     }
-
-    //    public List<Lead> getFilteredLeads(String from, String to)
-    //    {
-    //        LocalDate a = LocalDate.parse(from);
-    //        LocalDate b = LocalDate.parse(to);
-    //        return leadRepository.getLeadsByDate(a, b);
-    //    }
-
+    
     public Lead get(Long id)
     {
         Optional<Lead> lead = leadRepository.findById(id);
