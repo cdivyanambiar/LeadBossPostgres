@@ -58,7 +58,7 @@ public class LeadService
             leadEntity.setPhoneNumber(lead.getPhoneNumber());
             leadEntity.setAdditionalNotes(lead.getAdditionalNotes());
             leadEntity.setAdditionalLeadDetails(lead.getAdditionalLeadDetails());
-            leadEntity.setFollowup(lead.getFollowup());
+            //leadEntity.setFollowup(lead.getFollowup());
             return leadRepository.save(leadEntity);
         }
         return lead;

@@ -40,26 +40,14 @@ public class Lead
     private String emailAddress;
     private String phoneNumber;
     private String additionalNotes;
-
-    //    @OneToOne(cascade=CascadeType.ALL)
-    //    @JoinColumn(name = "additionalLeadDetails_id", nullable = false)
-    //    @OnDelete(action = OnDeleteAction.CASCADE)
-    //    @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
-    //    @JsonIdentityReference(alwaysAsId = true)
-    //    @JsonProperty("additionalLeadDetails_id")
+    
     @OneToOne(cascade = CascadeType.ALL, optional = true)
     @JoinColumn(name = "additionalLeadDetails_id")
     private AdditionalLeadDetails additionalLeadDetails;
-
-    //    @OneToOne(cascade=CascadeType.ALL)
-    //    @JoinColumn(name = "followup_id", nullable = false)
-    //    @OnDelete(action = OnDeleteAction.CASCADE)
-    //    @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
-    //    @JsonIdentityReference(alwaysAsId = true)
-    //    @JsonProperty("followup_id")
-    @OneToOne(cascade = CascadeType.ALL, optional = true)
-    @JoinColumn(name = "followup_id")
-    private Followup followup;
+   
+//    @OneToOne(cascade = CascadeType.ALL, optional = true)
+//    @JoinColumn(name = "followup_id")
+//    private Followup followup;
 
     public Lead()
     {
@@ -97,7 +85,7 @@ public class Lead
         this.phoneNumber = phoneNumber;
         this.additionalNotes = additionalNotes;
         this.additionalLeadDetails = additionalLeadDetails;
-        this.followup = followup;
+        //this.followup = followup;
     }
 
     public Long getId()
@@ -240,14 +228,14 @@ public class Lead
         this.additionalLeadDetails = additionalLeadDetails;
     }
 
-    public Followup getFollowup()
-    {
-        return followup;
-    }
-
-    public void setFollowup(Followup followup)
-    {
-        this.followup = followup;
-    }
+//    public Followup getFollowup()
+//    {
+//        return followup;
+//    }
+//
+//    public void setFollowup(Followup followup)
+//    {
+//        this.followup = followup;
+//    }
 
 }

@@ -10,6 +10,8 @@ Lead management is essential for increase any kind of sales. Most of the compani
 
 
 ## Support
+# Lead
+=======
 GET: http://localhost:8080/leads
 
 GET: http://localhost:8080/leads/{id}
@@ -46,3 +48,70 @@ Payload for POST :
 		"time": "10.00 AM"
 	}
 }
+
+# EMAIL
+========
+
+GET: http://localhost:8080/emails
+
+GET: http://localhost:8080/email/{id}
+
+POST: http://localhost:8080/email
+
+Delete: http://localhost:8080/emails
+
+Delete: http://localhost:8080/email/{1}
+
+# POST BODY for email
+=======================
+{
+"sendTo": "to@gamil.com",
+"sendFrom":"from@gmail.com",
+"subject": "Test",
+"dateOfEmail": "2020-02-30",
+"message": "Hi How are you?"
+}
+
+#smtp details 
+=============
+
+spring.mail.protocol=smtp
+## We have to change here with actual SMTP 
+spring.mail.host=smtp.mailtrap.io
+spring.mail.port=2525
+spring.mail.username=d03c450d0b4d4f
+spring.mail.password=456635b4507251
+spring.mail.properties.mail.smtp.auth = true
+spring.mail.properties.mail.smtp.starttls.enable = true
+
+# FOLLOW UP
+==============
+
+POST: http://localhost:8081/lead/{lead_id}/followup
+
+GET: http://localhost:8081/lead/{lead_id}/followups
+
+GET: http://localhost:8081/lead/{lead_id}/followup/{id}
+
+DELETE: http://localhost:8081/lead/{lead_id}/followup/{id}
+
+UPDATE: http://localhost:8081/lead/{lead_id}/followup/{id}
+
+# POST BODY for followup
+===========
+{
+	"owner": "LeadSource1",
+	"subject": "LeadType2",
+	"starttime":"2020-02-30",
+	"endtime":"2020-02-30",
+	"recuring":1,
+	"recuring_period":"week",
+	"remainder":0,
+	"remainer_period":"15 min",
+	"description":"desc",
+	"organizer":"LS1",
+	"lead_id": 1
+}
+
+
+
