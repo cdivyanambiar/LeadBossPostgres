@@ -43,7 +43,7 @@ public class FollowUpController
 			return leadRepository.findById(lead_id).map(lead -> {
 			followup.setLead(lead);
 			return followupService.create(followup);
-			}).orElseThrow(() -> new Exception("PostId " + lead_id + " not found"));
+			}).orElseThrow(() -> new Exception("Lead id " + lead_id + " not found"));
 	}
 	
 	@GetMapping("/lead/{lead_id}/followup/{id}")
@@ -56,7 +56,7 @@ public class FollowUpController
     public Followup update(@PathVariable (value = "lead_id") Long lead_id,
                                  @PathVariable (value = "id") Long id,@Valid @RequestBody Followup followupRequest) throws Exception {
         if(!leadRepository.existsById(lead_id)) {
-            throw new Exception("PostId " + lead_id + " not found");
+            throw new Exception("Lead id " + lead_id + " not found");
         }
 
         return followupRepository.findById(id).map(followup -> {

@@ -108,5 +108,61 @@ UPDATE: http://localhost:8081/lead/{lead_id}/followup/{id}
 	"lead_id": 1
 }
 
+# Meeting
+==============
 
+POST: http://localhost:8081/lead/{lead_id}/meeting
+
+GET: http://localhost:8081/lead/{lead_id}/meetings
+
+GET: http://localhost:8081/lead/{lead_id}/meeting/{id}
+
+DELETE: http://localhost:8081/lead/{lead_id}/meeting/{id}
+
+UPDATE: http://localhost:8081/lead/{lead_id}/meeting/{id}
+
+# POST BODY for meeting
+===========
+{
+	"owner": "LeadSource1",
+	"subject": "LeadType2",
+	"starttime":"2020-02-30",
+	"endtime":"2020-02-30",
+	"recuring":1,
+	"recuring_period":"week",
+	"remainder":0,
+	"remainer_period":"15 min",
+	"description":"desc",
+	"organizer":"LS1",
+	"lead_id": 1
+}
+
+# Phone call
+==============
+
+POST: http://localhost:8081/lead/{lead_id}/phonecall
+
+GET: http://localhost:8081/lead/{lead_id}/phonecalls
+
+GET: http://localhost:8081/lead/{lead_id}/phonecall/{id}
+
+DELETE: http://localhost:8081/lead/{lead_id}/phonecall/{id}
+
+UPDATE: http://localhost:8081/lead/{lead_id}/phonecall/{id}
+
+# POST BODY for phone call
+===========
+{
+	"owner": "LeadSource1",
+	"subject": "LeadType2",
+	"starttime":"2020-02-30",
+	"endtime":"2020-02-30",
+	"recuring":1,
+	"recuring_period":"week",
+	"remainder":0,
+	"remainer_period":"15 min",
+	"description":"desc",
+	"organizer":"LS1",
+	"lead_id": 1
+}
 
