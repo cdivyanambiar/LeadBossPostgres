@@ -32,14 +32,17 @@ public class Lead
     private String emailAddress;
     private String phoneNumber;
     private String additionalNotes;
+    private String country;
+    private Date dosc;
+    private Date docc;
     
-    @OneToOne(cascade = CascadeType.ALL, optional = true)
+   
+	@OneToOne(cascade = CascadeType.ALL, optional = true)
     @JoinColumn(name = "additionalLeadDetails_id")
     private AdditionalLeadDetails additionalLeadDetails;
    
 //    @OneToOne(cascade = CascadeType.ALL, optional = true)
 //    @JoinColumn(name = "followup_id")
-//    private Followup followup;
 
     public Lead()
     {
@@ -61,7 +64,10 @@ public class Lead
             String phoneNumber,
             String additionalNotes,
             AdditionalLeadDetails additionalLeadDetails,
-            Followup followup)
+            Followup followup,
+            String country,
+            Date dosc,
+            Date docc)
     {
         super();
         this.leadSource = leadSource;
@@ -77,7 +83,9 @@ public class Lead
         this.phoneNumber = phoneNumber;
         this.additionalNotes = additionalNotes;
         this.additionalLeadDetails = additionalLeadDetails;
-        //this.followup = followup;
+        this.country = country;
+        this.dosc = dosc;
+        this.docc = docc;
     }
 
     public Long getId()
@@ -220,14 +228,28 @@ public class Lead
         this.additionalLeadDetails = additionalLeadDetails;
     }
 
-//    public Followup getFollowup()
-//    {
-//        return followup;
-//    }
-//
-//    public void setFollowup(Followup followup)
-//    {
-//        this.followup = followup;
-//    }
+    public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public Date getDosc() {
+		return dosc;
+	}
+
+	public void setDosc(Date dosc) {
+		this.dosc = dosc;
+	}
+
+	public Date getDocc() {
+		return docc;
+	}
+
+	public void setDocc(Date docc) {
+		this.docc = docc;
+	}
 
 }

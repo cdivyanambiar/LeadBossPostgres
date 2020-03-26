@@ -37,6 +37,9 @@ Payload for POST :
 	"emailAddress": "dn@gmail.com",
 	"phoneNumber": "1111111111",
 	"additionalNotes": "Good",
+	"country":"India",
+	"dosc":"2020-03-09",
+	"docc":"2020-03-19",
 	"additionalLeadDetails": {
 		"leadPriority": "LeadPriority1",
 		"leadStatus": "LeadStatus1",

@@ -44,19 +44,24 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
 //                .logout()
 //                .permitAll();
 
-        http
-        .authorizeRequests()
-        .antMatchers("/resources/**", "/registration").permitAll()
-        .anyRequest().authenticated()
-        .and()       
-        .httpBasic()    // for rest
-	      .and()
-	      .formLogin()
-	      .loginPage("/login")
-	      .permitAll()
-	      .and()
-	      .logout()
-	      .permitAll();
+//        http
+//        .authorizeRequests()
+//        .antMatchers("/resources/**", "/").permitAll()
+//        .anyRequest().authenticated()
+//        .and()       
+//        .httpBasic() 
+//        // for rest
+//	      .and()
+//	      .csrf().disable()
+//	      .formLogin()
+//	      .loginPage("/login")
+//	      .permitAll()
+//	      .and()
+//	      .logout()
+//	      .permitAll();
+
+    	   http
+    	      .csrf().disable();
     }
 
     @Bean
