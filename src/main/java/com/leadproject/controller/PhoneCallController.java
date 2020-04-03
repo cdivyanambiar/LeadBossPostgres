@@ -22,7 +22,7 @@ import com.leadproject.repository.LeadRepository;
 import com.leadproject.repository.PhoneCallRepository;
 import com.leadproject.service.PhoneCallService;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/rest")
 public class PhoneCallController 

@@ -21,7 +21,7 @@ import com.leadproject.repository.LeadRepository;
 import com.leadproject.repository.MeetingRepository;
 import com.leadproject.service.MeetingService;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/rest")
 public class MeetingController 
