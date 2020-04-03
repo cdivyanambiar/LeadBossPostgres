@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.leadproject.model.Followup;
-import com.leadproject.model.Lead;
 import com.leadproject.repository.FollowupRepository;
 
 @Service

@@ -12,15 +12,15 @@ Lead management is essential for increase any kind of sales. Most of the compani
 ## Support
 # Lead
 =======
-GET: http://localhost:8080/leads
+GET: http://localhost:8080/rest/leads
 
-GET: http://localhost:8080/leads/{id}
+GET: http://localhost:8080/rest/leads/{id}
 
-POST: http://localhost:8080/leads
+POST: http://localhost:8080/rest/leads
 
-Delete: http://localhost:8080/leads
+Delete: http://localhost:8080/rest/leads
 
-Delete: http://localhost:8080/leads/{1}
+Delete: http://localhost:8080/rest/leads/{1}
 
 Payload for POST :
 
@@ -50,15 +50,15 @@ Payload for POST :
 # EMAIL
 ========
 
-GET: http://localhost:8080/emails
+GET: http://localhost:8080/rest/emails
 
-GET: http://localhost:8080/email/{id}
+GET: http://localhost:8080/rest/email/{id}
 
-POST: http://localhost:8080/email
+POST: http://localhost:8080/rest/email
 
-Delete: http://localhost:8080/emails
+Delete: http://localhost:8080/rest/emails
 
-Delete: http://localhost:8080/email/{1}
+Delete: http://localhost:8080/rest/email/{1}
 
 # POST BODY for email
 =======================
@@ -85,15 +85,15 @@ spring.mail.properties.mail.smtp.starttls.enable = true
 # FOLLOW UP
 ==============
 
-POST: http://localhost:8081/lead/{lead_id}/followup
+POST: http://localhost:8081/rest/lead/{lead_id}/followup
 
-GET: http://localhost:8081/lead/{lead_id}/followups
+GET: http://localhost:8081/rest/lead/{lead_id}/followups
 
-GET: http://localhost:8081/lead/{lead_id}/followup/{id}
+GET: http://localhost:8081/rest/lead/{lead_id}/followup/{id}
 
-DELETE: http://localhost:8081/lead/{lead_id}/followup/{id}
+DELETE: http://localhost:8081/rest/lead/{lead_id}/followup/{id}
 
-UPDATE: http://localhost:8081/lead/{lead_id}/followup/{id}
+UPDATE: http://localhost:8081/rest/lead/{lead_id}/followup/{id}
 
 # POST BODY for followup
 ===========
@@ -114,15 +114,15 @@ UPDATE: http://localhost:8081/lead/{lead_id}/followup/{id}
 # Meeting
 ==============
 
-POST: http://localhost:8081/lead/{lead_id}/meeting
+POST: http://localhost:8081/rest/lead/{lead_id}/meeting
 
-GET: http://localhost:8081/lead/{lead_id}/meetings
+GET: http://localhost:8081/rest/lead/{lead_id}/meetings
 
-GET: http://localhost:8081/lead/{lead_id}/meeting/{id}
+GET: http://localhost:8081/rest/lead/{lead_id}/meeting/{id}
 
-DELETE: http://localhost:8081/lead/{lead_id}/meeting/{id}
+DELETE: http://localhost:8081/rest/lead/{lead_id}/meeting/{id}
 
-UPDATE: http://localhost:8081/lead/{lead_id}/meeting/{id}
+UPDATE: http://localhost:8081/rest/lead/{lead_id}/meeting/{id}
 
 # POST BODY for meeting
 ===========
@@ -143,15 +143,15 @@ UPDATE: http://localhost:8081/lead/{lead_id}/meeting/{id}
 # Phone call
 ==============
 
-POST: http://localhost:8081/lead/{lead_id}/phonecall
+POST: http://localhost:8081/rest/lead/{lead_id}/phonecall
 
-GET: http://localhost:8081/lead/{lead_id}/phonecalls
+GET: http://localhost:8081/rest/lead/{lead_id}/phonecalls
 
-GET: http://localhost:8081/lead/{lead_id}/phonecall/{id}
+GET: http://localhost:8081/rest/lead/{lead_id}/phonecall/{id}
 
-DELETE: http://localhost:8081/lead/{lead_id}/phonecall/{id}
+DELETE: http://localhost:8081/rest/lead/{lead_id}/phonecall/{id}
 
-UPDATE: http://localhost:8081/lead/{lead_id}/phonecall/{id}
+UPDATE: http://localhost:8081/rest/rest/lead/{lead_id}/phonecall/{id}
 
 # POST BODY for phone call
 ===========
