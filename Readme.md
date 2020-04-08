@@ -169,3 +169,26 @@ UPDATE: http://localhost:8081/rest/rest/lead/{lead_id}/phonecall/{id}
 	"lead_id": 1
 }
 
+Sales Activity
+===============
+
+POST: http://localhost:8081/rest/lead/{lead_id}/salesactivity
+
+GET: http://localhost:8081/rest/lead/{lead_id}/salesactivity
+
+GET: http://localhost:8081/rest/lead/{lead_id}/salesactivity/{id}
+
+DELETE: http://localhost:8081/rest/lead/{lead_id}/salesactivity/{id}
+
+UPDATE: http://localhost:8081/rest/rest/lead/{lead_id}/salesactivity/{id}
+
+POSt Body for sales activity
+==============================
+
+{
+	"lead_id": 1,
+	"product": "product1",
+	"salesDate": "2020-02-30",
+	"owner": "FyrozHaneefa",
+	"status": "Clinicalconversion"
+}

@@ -1,7 +1,7 @@
 package com.leadproject.service;
 
+import java.util.List;
 import java.util.Optional;
-
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,12 +27,24 @@ public class SalesActivityService {
 		}
 
 	}
+	
+	public SalesActivity getByLeadIdAndId(Long lead_id, Long id) {
+		Optional<SalesActivity> salesActivity = salesRepository.findByIdAndLeadId(id, lead_id);
+		if (salesActivity.isPresent()) {
+			return salesActivity.get();
+		} else {
+			return null;
+		}
+	}
+
+	public List<SalesActivity> findByLeadId(Long lead_id) {
+		return salesRepository.findByLeadId(lead_id);
+	}
 
 	public SalesActivity update(final SalesActivity salesActivity, final Long id) {
 		Optional<SalesActivity> activity = salesRepository.findById(id);
 		if (null != activity.get()) {
-			SalesActivity activityEntity = activity.get();
-			activityEntity.setLead(salesActivity.getLead());
+			SalesActivity activityEntity = activity.get();			
 			activityEntity.setOwner(salesActivity.getOwner());
 			activityEntity.setProduct(salesActivity.getProduct());
 			activityEntity.setSalesDate(salesActivity.getSalesDate());
