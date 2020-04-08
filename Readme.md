@@ -50,6 +50,10 @@ Payload for POST :
 # EMAIL
 ========
 
+For sending email using template put templates in LeadBossPostgres\src\main\resources\templates.  
+I have put sample template email.ftl. 
+You can see the variables used there.  
+
 GET: http://localhost:8080/rest/emails
 
 GET: http://localhost:8080/rest/email/{id}
@@ -63,8 +67,9 @@ Delete: http://localhost:8080/rest/email/{1}
 # POST BODY for email
 =======================
 {
-"sendTo": "to@gamil.com",
-"sendFrom":"from@gmail.com",
+"name" : "Divya",
+"sendTo": "cdivyanambiar@gamil.com",
+"sendFrom":"cdivyanambiar@gmail.com",
 "subject": "Test",
 "dateOfEmail": "2020-02-30",
 "message": "Hi How are you?"
