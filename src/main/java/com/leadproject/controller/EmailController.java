@@ -1,6 +1,9 @@
 package com.leadproject.controller;
 
+import java.io.IOException;
 import java.util.List;
+
+import javax.mail.MessagingException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -15,6 +18,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.leadproject.model.Email;
 import com.leadproject.service.EmailService;
 
+import freemarker.core.ParseException;
+import freemarker.template.MalformedTemplateNameException;
+import freemarker.template.TemplateException;
+import freemarker.template.TemplateNotFoundException;
+
 @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/rest")
@@ -24,7 +32,7 @@ public class EmailController
     private EmailService emailService;
 
     @PostMapping("/email")
-    public String sendmail(@RequestBody Email email) 
+    public String sendmail(@RequestBody Email email) throws TemplateNotFoundException, MalformedTemplateNameException, ParseException, MessagingException, IOException, TemplateException 
     {
 
         emailService.sendMail(email);
