@@ -2,8 +2,9 @@ package com.leadproject.model;
 
 public enum ClinicalIntensity
 {
-    ClinicalIntensity1 ("ClinicalIntensity1"),
-    ClinicalIntensity2 ("ClinicalIntensity2");
+	Mild ("Mild"),
+	Medium ("Medium"),
+	Acute ("Acute");
 
     private final String clinicalIntensity;
 

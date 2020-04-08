@@ -4,7 +4,7 @@ public enum Gender
 {
     Male ("Male"),
     Female ("Female"),
-    Transgender ("Transgender");
+    Other ("Other");
 
     private final String gender;
 

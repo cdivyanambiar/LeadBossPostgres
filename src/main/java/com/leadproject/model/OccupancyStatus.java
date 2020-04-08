@@ -2,8 +2,9 @@ package com.leadproject.model;
 
 public enum OccupancyStatus
 {
-    OccupancyStatus1 ("OccupancyStatus1"),
-    OccupancyStatus2 ("OccupancyStatus2");
+    DSO ("DSO"),
+    FSO ("FSO"),
+    FSQ ("FSQ");
 
     private final String occupancyStatus;
 

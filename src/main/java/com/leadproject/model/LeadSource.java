@@ -1,9 +1,15 @@
 package com.leadproject.model;
 
 public enum LeadSource
-{
-    LeadSource1 ("LeadSource1"),
-    LeadSource2 ("LeadSource2");
+{	
+	OrganicSearch ("OrganicSearch"),
+	OnlineChat ("Online Chat"),
+	InboundPhonecall ("Inbound Phone call"),
+	InboundEmail ("Inbound Email"),
+	SocialMedia ("Social Media"),
+	PatientReferral ("Patient Referra"),
+	DoctorReferral ("Doctor Referral"),
+	Other ("Other");
 
     private final String leadSource;
 

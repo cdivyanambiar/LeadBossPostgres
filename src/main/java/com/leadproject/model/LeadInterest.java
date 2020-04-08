@@ -2,8 +2,11 @@ package com.leadproject.model;
 
 public enum LeadInterest
 {
-    LeadInterest1 ("LeadInterest"),
-    LeadInterest2 ("LeadInterest2");
+	Panchakarma ("Panchakarma"),
+	Spine ("Spine"),
+	Rehabilitation ("Rehabilitation"),
+	DigestiveDisorder ("Digestive Disorder"),
+	GynaecologicalDisorders ("Gynaecological Disorders");
 
     private final String leadInterest;
 

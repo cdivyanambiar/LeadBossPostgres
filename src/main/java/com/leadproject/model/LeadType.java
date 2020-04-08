@@ -2,8 +2,8 @@ package com.leadproject.model;
 
 public enum LeadType
 {
-    LeadType1 ("LeadType1"),
-    LeadType2 ("LeadType2");
+	 ProductEnquiry ("Product Enquiry"),
+	 ResidentialTreatmentEnquiry ("Residential Treatment Enquiry");
 
     private final String leadType;
 

@@ -2,8 +2,10 @@ package com.leadproject.model;
 
 public enum LeadPriority
 {
-    LeadPriority1 ("LeadPriority1"),
-    LeadPriority2 ("LeadPriority2");
+	 
+    Hot("Hot") ,
+    Warm("Warm") ,
+    Cold("Cold");
 
     private final String leadPriority;
 
